@@ -8,10 +8,10 @@ spec:
     replicas: 3 #3
     resources: #4
       requests:
-        memory: 0.1Gi
+        memory: 512Mi
         cpu: "1"
       limits:
-        memory: 0.1Gi
+        memory: 512Mi
         cpu: "2"
       jvmOptions: #5
         -Xms: 3276m
@@ -34,7 +34,7 @@ spec:
       log.retention.hours: 1
     storage: #8
       type: persistent-claim
-      size: 0.1Gi
+      size: 512Mi
       class: standard
       deleteClaim: false
     logging: #9
@@ -45,15 +45,15 @@ spec:
     replicas: 3
     storage:
       type: persistent-claim
-      size: 0.1Gi
+      size: 512Mi
       class: standard
       deleteClaim: false
     resources:
       requests:
-        memory: 0.1Gi
+        memory: 512Mi
         cpu: "1"
       limits:
-        memory: 0.1Gi
+        memory: 512Mi
         cpu: "1.5"
     logging:
       type: inline
